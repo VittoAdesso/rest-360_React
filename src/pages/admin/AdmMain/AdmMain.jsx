@@ -12,9 +12,12 @@ const AdmMain = () => {
 
       <div className="admContainer">
         <div className="admButtonSpace">
-          <Link to="/pedidosencurso">
+
+
+          {/* <Link to="/pedidosencurso">
             <button className="admButton">Pedidos en curso</button>
-          </Link>
+          </Link> */}
+
         </div>
         <div className="admButtonSpace">
           <Link to="/listadopedidos">

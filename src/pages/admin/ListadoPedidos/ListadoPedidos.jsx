@@ -43,7 +43,7 @@ const ListadoPedidos = () => {
               <th>PVP</th>
               <th>Estado</th>
               <th>Dia/Hora</th>
-              <th>Ver detalle</th>
+              {/* <th>Ver detalle</th> */}
             </tr>
           </thead>
           <tbody>
@@ -84,7 +84,7 @@ const ListadoPedidos = () => {
                 <td data-th="Dia/Hora:" className="div__table__center">
                   {item.date}
                 </td>
-                <td data-th="Ver detalle:" className="div__table__center">
+                {/* <td data-th="Ver detalle:" className="div__table__center">
                   <p className="spaceMovile">
                     <Link to={`/detallepedidos/${item.id}`}>
                       <img
@@ -94,7 +94,7 @@ const ListadoPedidos = () => {
                       />
                     </Link>
                   </p>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>

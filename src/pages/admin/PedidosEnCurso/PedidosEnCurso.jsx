@@ -16,14 +16,14 @@ const PedidosEnCurso = () => {
 
   //Fetch de pdidos al servidor
   useEffect(() => {
-    fetch("http://localhost:3001/api/orders")
+    fetch("http://localhost:3001/api/orders") 
       .then((response) => response.json())
       .then((data) => setDatosArray(data));
   }, []);
 
   useEffect(() => {
     // fetch(`http://localhost:3001/api/orderArticles/order/${comanda}`)
-    fetch(`http://localhost:3001/api/orderArticles/order/1`)
+    fetch(`http://localhost:3001/api/api/orders/22`)
       .then((response) => response.json())
       .then((data) => setComandaDatos(data));
   }, [comanda]);

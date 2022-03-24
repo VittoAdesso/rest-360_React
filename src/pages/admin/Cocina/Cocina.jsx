@@ -33,14 +33,18 @@ const Cocina = () => {
     useEffect(() => {
       fetch("http://localhost:3001/api/orders")
         .then((response) => response.json())
-        .then((data) => setCocinaDatos(data));
+        .then((data) =>
+        {console.log("Data -->", data)
+        setCocinaDatos(data)});
     }, []);
-    console.log("cocinadatos--->", cocinaDatos)
+    // console.log("cocinadatos--->", cocinaDatos)
+
 
     useEffect(()=>{
-      setNoSonTicket(cocinaDatos.filter(numeropedido => numeropedido.status < 5))
+      setNoSonTicket(cocinaDatos.filter(numeropedido => numeropedido.status < 2))
     }, [cocinaDatos])
-    console.log("no son ticket--->", noSonTicket)
+    // console.log("no son ticket--->", noSonTicket)
+
 
   useEffect(()=>{
     setPedidosArray([]);
@@ -53,35 +57,39 @@ const Cocina = () => {
       .then((response) => response.json())
       .then((data) => pedidosArray.push(data))//setPedidosArray([...pedidosArray, data]));
   }}, [noSonTicket, pedidosArray],)
-  console.log("Pedidos Array--->", pedidosArray)
+  // console.log("Pedidos Array_ok--->", pedidosArray)
+  // console.log("Pedidoarray articles--->", pedidosArray.articles)
 
-  console.log("Pedidoarray articles--->", pedidosArray.articles)
 
-  useEffect(()=>{
-    setPlatejos([]);
-  }, [])
 
-    useEffect(()=> {
-      for (let index of pedidosArray){
-        let platoAMeter = index.articles
-        platejos.push(platoAMeter)
-        console.log("index.articles--->", platoAMeter)
-       }
-    },[pedidosArray, platejos])
-    console.log("PLATEJOS--->", platejos)
+  // useEffect(()=>{
+  //   setPlatejos([]);
+  // }, [])
 
-    useEffect(()=>{
-      setFinalArray([]);
-    }, [])
 
-    useEffect(()=> {
-      for (let index of platejos){
-        console.log("INDEXXXXXXXX->", index)
-        for (let ind of index){
-          finalArray.push(ind.orderArticle)
-        }
-       }
-    },[])
+  //   useEffect(()=> {
+  //     for (let index of pedidosArray){
+  //       let platoAMeter = index.articles
+  //       platejos.push(platoAMeter)
+  //       // console.log("index.articles--->", platoAMeter)
+  //      }
+  //   },[pedidosArray, platejos])
+  //   // console.log("PLATEJOS--->", platejos)
+
+
+  //   useEffect(()=>{
+  //     setFinalArray([]);
+  //   }, [])
+
+
+  //   useEffect(()=> {
+  //     for (let index of platejos){
+  //       // console.log("INDEXXXXXXXX->", index)
+  //       for (let ind of index){
+  //         finalArray.push(ind.orderArticle)
+  //       }
+  //      }
+  //   },[])
 
   
   /* Inicio control de carga */
@@ -122,17 +130,17 @@ const Cocina = () => {
   //   };
   // }, [count]);
 
-
   /* fin control de carga */
 
   useEffect(() => {
-    setPedidosCocina(finalArray.filter((plato) => plato.status === 1));
-    setElaboracionCocina(finalArray.filter((plato) => plato.status === 2));
-    setTerminadosCocina(finalArray.filter((plato) => plato.status === 3));
-    setServidosCocina(finalArray.filter((plato) => plato.status === 4));
-  }, []);
+    console.log("Pedidos Array_ok_2--->", pedidosArray)
+    setPedidosCocina(pedidosArray.filter(plato => plato.id === 17));
+    setElaboracionCocina(pedidosArray.filter((plato) => plato.status === 2));
+    setTerminadosCocina(pedidosArray.filter((plato) => plato.status === 3));
+    setServidosCocina(pedidosArray.filter((plato) => plato.status === 4));
+  }, [pedidosArray]);
 
-  console.log("PEDIDOS COCINAAAAAAAAAAAA-->", pedidosCocina);
+  console.log("COCINAAAAAAAAAAAA-->", pedidosCocina);
 
   return (
     <>

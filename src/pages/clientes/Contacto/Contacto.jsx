@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "../../../Hooks/useForm";
 // import StandardHeader from "src/components/StandardHeader/StandardHeader";
 import StandardHeader from "../../../components/StandardHeader/StandardHeader";
@@ -39,19 +39,63 @@ const validationsForm = (form) => {
 };
 
 const Contacto = () => {
+  const [message, setMessage] = useState("");
   const { form, errors, formOK, isChecked, handleCheck, handleChange, handleSubmit } = useForm(
     initialForm,
     validationsForm
   );
 
+
   useEffect(() => {
     if (formOK) {
-      console.log("Datos del formuario correctos. Guardamos en base de datos");
-      console.log(form);
+      guardadoDatos()
     } else {
       return;
     }
   }, [formOK]);
+  
+
+  let guardadoDatos = async (e) => {
+        try{
+            let response = await fetch("/api/contact/createContact?", {
+              
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({                   
+                    // idReserva: uuidv4(),
+                    firstName: form.name,
+                    lastName: form.surnames,
+                    phone: form.phone,
+                    email: form.email,
+                    anyComment: form.comments,
+
+                })
+            });
+            let responseJson = await response.json();
+            if(response.status === 200) {
+
+                setMessage("Tu mensaje se ha enviado con éxito");
+                //initialForm()
+                
+                // setTimeout(() => {
+                //   goToLogin()
+                // }, 750)
+                
+            }else{
+                setMessage("Ha habido un error");
+            }
+            
+        }catch (err) {
+            console.log(err);
+            }
+    
+          }
+
+
+
+
+
+
 
   //Props para el componente de header genérico: StandardHeader
   const bgImage = "https://images2.imgbox.com/d4/be/6FUoKJPx_o.jpg";
