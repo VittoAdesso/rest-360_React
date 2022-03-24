@@ -57,24 +57,24 @@ const Cocina = () => {
   // }, [])
 
 
-<<<<<<< HEAD
-    useEffect(()=> {
-      for (let index of platejos){
-        console.log("INDEXXXXXXXX->", index)
-        for (let ind of index){
-          finalArray.push(ind.orderArticle)
-        }
-       }
-    },[finalArray, platejos])
+// <<<<<<< HEAD
+//     useEffect(()=> {
+//       for (let index of platejos){
+//         console.log("INDEXXXXXXXX->", index)
+//         for (let ind of index){
+//           finalArray.push(ind.orderArticle)
+//         }
+//        }
+//     },[finalArray, platejos])
 
 
-  useEffect(() => {
-    setPedidosCocina(finalArray.filter((plato) => plato.status === 1));
-    setElaboracionCocina(finalArray.filter((plato) => plato.status === 2));
-    setTerminadosCocina(finalArray.filter((plato) => plato.status === 3));
-    setServidosCocina(finalArray.filter((plato) => plato.status === 4));
-  }, [finalArray]);
-=======
+//   useEffect(() => {
+//     setPedidosCocina(finalArray.filter((plato) => plato.status === 1));
+//     setElaboracionCocina(finalArray.filter((plato) => plato.status === 2));
+//     setTerminadosCocina(finalArray.filter((plato) => plato.status === 3));
+//     setServidosCocina(finalArray.filter((plato) => plato.status === 4));
+//   }, [finalArray]);
+// =======
   //   useEffect(()=> {
   //     for (let index of pedidosArray){
   //       let platoAMeter = index.articles
@@ -140,16 +140,16 @@ const Cocina = () => {
 
   /* fin control de carga */
 
-  useEffect(() => {
-    console.log("Pedidos Array_ok_2--->", pedidosArray)
-    setPedidosCocina(pedidosArray.filter(plato => plato.id === 17));
-    setElaboracionCocina(pedidosArray.filter((plato) => plato.status === 2));
-    setTerminadosCocina(pedidosArray.filter((plato) => plato.status === 3));
-    setServidosCocina(pedidosArray.filter((plato) => plato.status === 4));
-  }, [pedidosArray]);
->>>>>>> 6bf7fd20bb83a03523ea1cc14aa64c4949e42b7c
+//   useEffect(() => {
+//     console.log("Pedidos Array_ok_2--->", pedidosArray)
+//     setPedidosCocina(pedidosArray.filter(plato => plato.id === 17));
+//     setElaboracionCocina(pedidosArray.filter((plato) => plato.status === 2));
+//     setTerminadosCocina(pedidosArray.filter((plato) => plato.status === 3));
+//     setServidosCocina(pedidosArray.filter((plato) => plato.status === 4));
+//   }, [pedidosArray]);
+// >>>>>>> 6bf7fd20bb83a03523ea1cc14aa64c4949e42b7c
 
-  console.log("COCINAAAAAAAAAAAA-->", pedidosCocina);
+  // console.log("COCINAAAAAAAAAAAA-->", pedidosCocina);
 
   return (
     <>

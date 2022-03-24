@@ -104,11 +104,11 @@ const PedidoMesa = () => {
     const userObject = JSON.parse(userString);
     id = userObject.id;
   }
-<<<<<<< HEAD
+// <<<<<<< HEAD
   
-=======
+// =======
 
->>>>>>> 6bf7fd20bb83a03523ea1cc14aa64c4949e42b7c
+// >>>>>>> 6bf7fd20bb83a03523ea1cc14aa64c4949e42b7c
   //POST del pedido y los artículos a la base de datos
   let postOrder = async () => {
     try {

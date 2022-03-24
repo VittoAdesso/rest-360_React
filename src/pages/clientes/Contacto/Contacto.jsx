@@ -57,7 +57,7 @@ const Contacto = () => {
 
   let guardadoDatos = async (e) => {
         try{
-            let response = await fetch("/api/contact/createContact?", {
+            let response = await fetch("http://localhost:3001/api/contact/create", {
               
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
