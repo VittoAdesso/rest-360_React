@@ -3,23 +3,27 @@ import { Link } from "react-router-dom";
 import "./styles.scss";
 import { CartContext } from "../CartContext/CartContext";
 
+
+
 const Navigation = () => {
 
   const {cartItems}  = useContext(CartContext);
   const [isChecked, setIsChecked] = useState(false);
 
+
   const handleOnChangeLogo = () => {
     // El logo solo cierra el menu cuando este está activo.
     if (isChecked){
       handleOnChange()
+      
     }
   };
 
   const handleOnChange = () => {
     setIsChecked(!isChecked);
+
   };
 
-  //onBlur={handleOnChangeLogo}
 
   return (
     <nav role="navigation" className="nav" onMouseLeave={handleOnChangeLogo}>
@@ -50,6 +54,7 @@ const Navigation = () => {
             <li>CONTACTO</li>
           </Link>
         </ul>
+        
       </div>
 
       <div className="nav__background">
@@ -67,7 +72,7 @@ const Navigation = () => {
         <p></p>
         )}
 
-
+        
 
 
         <Link to="/" onClick={handleOnChangeLogo}>

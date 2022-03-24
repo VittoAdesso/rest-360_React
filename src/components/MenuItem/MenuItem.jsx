@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./styles.scss";
 import { CartContext } from "../CartContext/CartContext"
 
 const MenuItem = (props) => {
 
   const {cartItems, setCartItems} = useContext(CartContext)
-  const [valor, setValor] = useState(0);
 
 //Función para que quite el item actual de la lista
   const handleRemoveItem = (nombre) => { 
@@ -21,25 +20,6 @@ const handleAddItem = (articulo) => {
   setCartItems(articulo)
 }
 
-
-
-//       const funcionContador = () => {
-//         const incremento = () => {
-//             setValor(valor + 1);  
-//         }
-//         const decremento = () => {
-//             setValor(valor - 1);
-//         }
-//         return {
-//             valor,
-//             incremento,
-//             decremento,
-//         }
-//       }
-
-
-
-// const contador = funcionContador();
   
   return (
     <div className="ItemDiv">
@@ -189,16 +169,6 @@ const handleAddItem = (articulo) => {
               <p></p>
             )}
             
-
-{/* 
-            <div>
-            <div><p>Cantidad: {contador.valor}</p></div>
-            <button onClick={contador.incremento}>+</button>
-            <button onClick={contador.decremento}>-</button>
-           
-             </div>
-
- */}
             <div className="addItem">
               <img className="controlIcon" src={require("../../images/icons/ico_anadir.png")} alt="Añadir al pedido" onClick={() => handleAddItem(props.carta)}/> 
             </div>

@@ -31,15 +31,15 @@ const validationsForm = (form) => {
 };
 
 const Regalar = () => {
-  const [message, setMessage] = useState("");
-  const [codigoBBDD, setCodigoBBDD] = useState("")
+  const [setMessage] = useState("");
+
   const { form, errors, formOK, handleChange, handleSubmit } = useForm(
     initialForm,
     validationsForm
   );
 
   const codigoRandom = () => {
-    // const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
     // Obtenemos un codigo random, en base a 36 caracteres (abecedario + nunmeros) y con una largura de 6 (8-2).
     let codigo = Math.random().toString(36).substring(2, 8);
     return codigo;
@@ -87,11 +87,6 @@ const Regalar = () => {
       let responseJson = await response.json();
       if (response.status === 200) {
         setMessage("Usuario creado con éxito");
-        //initialForm()
-
-        // setTimeout(() => {
-        //   goToLogin()
-        // }, 750)
       } else {
         setMessage("Ha habido un error");
       }

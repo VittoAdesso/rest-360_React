@@ -10,7 +10,7 @@ const LoginForm = (props) => {
   const navigate = useNavigate();
   const [iniciadaSesion, setIniciadaSesion] = useState(false)
 
-  const { usuario, setUsuario } = useContext(UserContext);
+  const { setUsuario } = useContext(UserContext);
   const { state } = useLocation();
 
 

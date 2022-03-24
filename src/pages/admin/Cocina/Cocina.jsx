@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
-import OrderItem from "../../../components/OrderItem/OrderItem";
 import { Link } from "react-router-dom";
-import OrderCardtem from "src/components/OrderCardItem/OrderCardItem";
 import KitchenItem from "src/components/kitchenItem/kitchenItem";
-
 import "./styles.scss";
 
 const Cocina = () => {
-    const [datosArray, setDatosArray] = useState([]);
-    const [comandaDatos, setComandaDatos] = useState([]);
-    const [comanda, setComanda] = useState();
     const [cocinaDatos, setCocinaDatos] = useState([]);
 
     /* Estados de la cocina */
@@ -18,16 +12,12 @@ const Cocina = () => {
     const [elaboracionCocina, setElaboracionCocina] = useState([]);
     const [terminadosCocina, setTerminadosCocina] = useState([]);
     const [servidoCocina, setServidosCocina] = useState([]);
-    const [ticketCocina, setTicketCocina] = useState([]);
+    const [ticketCocina] = useState([]);
 
     const [noSonTicket, setNoSonTicket] = useState([]);
     const [pedidosArray, setPedidosArray] = useState([]);
     const [platejos, setPlatejos] = useState([]);
     const [finalArray, setFinalArray] = useState([]);
-
-    const handleSelectItem = (ev) => {
-      setComanda(ev);
-    };
 
     //Fetch de pdidos al servidor
     useEffect(() => {
@@ -67,6 +57,24 @@ const Cocina = () => {
   // }, [])
 
 
+<<<<<<< HEAD
+    useEffect(()=> {
+      for (let index of platejos){
+        console.log("INDEXXXXXXXX->", index)
+        for (let ind of index){
+          finalArray.push(ind.orderArticle)
+        }
+       }
+    },[finalArray, platejos])
+
+
+  useEffect(() => {
+    setPedidosCocina(finalArray.filter((plato) => plato.status === 1));
+    setElaboracionCocina(finalArray.filter((plato) => plato.status === 2));
+    setTerminadosCocina(finalArray.filter((plato) => plato.status === 3));
+    setServidosCocina(finalArray.filter((plato) => plato.status === 4));
+  }, [finalArray]);
+=======
   //   useEffect(()=> {
   //     for (let index of pedidosArray){
   //       let platoAMeter = index.articles
@@ -139,6 +147,7 @@ const Cocina = () => {
     setTerminadosCocina(pedidosArray.filter((plato) => plato.status === 3));
     setServidosCocina(pedidosArray.filter((plato) => plato.status === 4));
   }, [pedidosArray]);
+>>>>>>> 6bf7fd20bb83a03523ea1cc14aa64c4949e42b7c
 
   console.log("COCINAAAAAAAAAAAA-->", pedidosCocina);
 

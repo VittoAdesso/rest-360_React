@@ -1,6 +1,5 @@
-import { type } from "@testing-library/user-event/dist/type";
-import React, { useContext, useState, useEffect } from "react";
-// import { CartContext } from "../CartContext/CartContext";
+import React, { useState, useEffect } from "react";
+
 
 import "./styles.scss";
 
@@ -18,29 +17,6 @@ const KitchenItem = (props) => {
 
   console.log("Linea Pedido--->", lineaPedido)
 
-  //   const {cartItems, setCartItems} = useContext(CartContext)
-  //   const [valor, setValor] = useState(0);
-
-  //Función para que quite el item actual de la lista
-  //   const handleRemoveItem = (nombre) => {
-  //     let index = cartItems.findIndex(i => i.name === nombre)
-  //     if (index > -1){
-  //       cartItems.splice(index, 1)
-  //       setCartItems(cartItems => [...cartItems]) //Para forzar el re render
-  //     }
-  //   }
-
-  //  //Función para añadir el item actual a la lista
-  // const handleAddItem = (articulo) => {
-  //   setCartItems(articulo)
-  // }
-//
-  // const contador = funcionContador();
-
-  //Fetch de pdidos al servidor
-
-
-  
   return (
     <div className="ItemDiv">
       <div className={props.style}>

@@ -62,6 +62,7 @@ const IniciarSesion = () => {
           </Link>
       </div>
       <div className="footerSetter"></div>
+      
     </div>
   );
 };

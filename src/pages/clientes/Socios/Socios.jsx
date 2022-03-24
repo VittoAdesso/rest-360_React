@@ -1,15 +1,24 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import StandardHeader from "../../../components/StandardHeader/StandardHeader";
 import { Link } from 'react-router-dom';
+import { useNavigate} from "react-router-dom";
+import { UserContext } from "src/context/UserContext";
+
 const Socios = ({user}) => {
   //Props para el componente de header genérico: StandardHeader
   const bgImage = "https://images2.imgbox.com/69/b4/NbrJbPWf_o.jpg";
   
-  const { firstName, lastName, email, phone, userName, rol } = user|| {};
+  let { firstName, lastName, email, phone, userName, rol, id } = user|| {};
   const firstNameInitial = firstName.charAt(0);
   const lastNameInitial = lastName.charAt(0);
-
-  const [showModify, setShowModify] = useState(false);
+  const navigate = useNavigate();
+  const { setUsuario } = useContext(UserContext);
+  const logoutUser = () => {
+    localStorage.removeItem("user")
+    localStorage.removeItem("jwtToken")
+    setUsuario(null)
+    navigate("/")
+  };
 
 
   return (
@@ -37,24 +46,18 @@ const Socios = ({user}) => {
         <p><strong>Teléfono</strong> {phone}</p>
       </div>
 
-      <div className="buttonsDiv">
-        <button className="standardButton" onClick={() => setShowModify(true)}>Modificar datos</button>
-      </div>
+<div className="buttonsDiv">
+{id === 6 ? (
+        <Link to="/login">
+          <button className="standardButton">INICIAR SESIÓN</button></Link>) : (<button className="standardButton" onClick={logoutUser}>CERRAR SESIÓN</button>)}
+
 
       {rol === "admin" ? (
         <Link to="/admmain">
-          <button className="standardButton">Área de Administrador</button></Link>) : (<p></p>)}
+          <button className="standardButton">Ir a ADMIN</button></Link>) : (<p></p>)}
 
-      {rol === "chef" ? (
-        <Link to="/cocina">
-          <button className="standardButton">Acceso a Cocina</button></Link>) : (<p></p>)}
+</div>
 
-
-      {showModify === true ? (
-        <p>Mostrando modificar datos</p>
-        ) : (
-          <p></p>
-          )}
 
     </div>
 
