@@ -1,0 +1,11 @@
+.horarios{
+    text-align:center;
+    & ul{
+        text-align: left;
+        display:inline-block;
+        & li{
+            list-style:none;
+            margin: 12px 12px 12px -12px;            
+        }
+    }
+}

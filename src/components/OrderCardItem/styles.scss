@@ -1,0 +1,52 @@
+.orderItemDiv {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 100%;
+  cursor: pointer;
+
+  & h1 {
+    padding: 5px;
+    margin: 0px;
+  }
+
+  & p {
+    font-size: 1.5rem;
+    border-top: 1px solid gray;
+    margin: 0 20px 0 20px;
+  }
+
+  &__card {
+    display: flex;
+    // flex-direction: row;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 1.75rem;
+  }
+}
+
+.ItemDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.addItem {
+  cursor: pointer;
+}
+
+.orderTable {
+  width: 100%;
+}
+
+.rwd-table {
+  width: 100%;
+}
+.sinborde {
+  border: 0;
+}
+

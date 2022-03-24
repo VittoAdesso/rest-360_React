@@ -1,0 +1,23 @@
+
+.notFound{
+    background-image: url("../../../images/photos/notfound.jpg");
+    background-size: initial;
+    background-position:center center; /*respecto a body*/
+    background-repeat: no-repeat;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & div{
+        text-align: center;
+    }
+
+    &__subtitle{
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 0.5rem;
+    }
+
+}

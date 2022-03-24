@@ -1,0 +1,15 @@
+
+.detalleCabecera{
+    flex-direction: row;
+    display: flex;
+}
+
+.datosOrdenCabecera{
+    width: 50%;
+    text-align: left;
+}
+
+.datosUsuarioCabecera{
+    width: 50%;
+    text-align: right;
+}

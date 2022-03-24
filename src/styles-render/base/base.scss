@@ -1,0 +1,85 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "../elements/button.scss";
+@import "../elements/icons.scss";
+@import "../elements/titles.scss";
+@import "../elements/input.scss";
+@import "../elements/form.scss";
+@import "../elements/table.scss";
+
+
+
+a{
+  text-decoration: none;
+  color: $navcolor;
+}
+
+hr {
+  border: 1 solid gray;
+  width: 98%;
+}
+
+.mainDiv {
+    text-align: center;
+    margin: 63px auto 0 auto;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+  }
+
+.photoHader{
+  background-size: cover;
+  background-position: 0 22px;
+  background-repeat: no-repeat;
+  height: 20vh;
+  padding-top: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.sectionParagraph{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.userHeader{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-around;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.peopleDiv{
+  margin-bottom: 4rem;
+}
+
+.footerSetter{
+  margin-bottom: 10rem;
+}
+
+// Para poner en elemento separador veritcal de 25px.
+  .vSpace {
+    margin: 15px;
+  }
+
+
+  // Estilo para los textos legales.
+ .textoslegales{
+  text-align: justify;
+  padding: 2rem;
+
+  }
+  

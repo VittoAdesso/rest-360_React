@@ -1,0 +1,22 @@
+.acordeonDiv{
+    margin: 0 2rem;
+    &__element{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-self: center;
+        border-bottom: 1px solid black;
+        margin-bottom: 2rem;
+        &__image{
+            width: 2rem;
+            padding-top: 2rem;
+        }
+    }
+}
+
+.deployedDiv{
+    display: flex;
+    flex-direction: column;
+}

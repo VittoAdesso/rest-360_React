@@ -1,0 +1,80 @@
+.standardButton {
+  border-style: none;
+  border-radius: 10px;
+  font-family: $firstFont;
+  font-size: 1.1rem;
+  background-color: $highcolor;
+  color: $bgcolor;
+  height: 50px;
+  width: 200px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.standardButton:hover {
+  background-color: $navcolor;
+}
+
+.translucidButton {
+  border: 2px solid $highcolor;
+  border-radius: 10px;
+  font-family: $firstFont;
+  font-size: 1.1rem;
+  background-color: $translucid;
+  color: $bgcolor;
+  height: 50px;
+  width: 200px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.translucidButton:hover {
+  color: $highcolor;
+}
+
+.btnreservas {
+  border-radius: 20px;
+  width: 32px;
+  height: 32px;
+}
+
+.buttonsDiv {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+
+
+/* Botones del admin */
+
+.admContainer{
+text-align: center;
+}
+
+.admButtonSpace {
+  flex-wrap: wrap;
+  border-bottom: 1px solid grey;
+  padding: 20px;
+  max-width: 80%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.admButton {
+  border-style: none;
+  border-radius: 10px;
+  font-family: $firstFont;
+  font-size: 1.1rem;
+  background-color: $highcolor;
+  color: $bgcolor;
+  height: 50px;
+  width: 200px;
+  margin: 15px;
+  cursor: pointer;
+}
+.admButton:hover {
+    background-color: $navcolor;
+  }
+  

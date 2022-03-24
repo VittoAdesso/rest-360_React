@@ -1,0 +1,120 @@
+.detallePlato {
+  flex-direction: row;
+  display: flex;
+}
+
+.detallePlato__img {
+  width: 100%;
+  margin: 1%;
+  & img {
+    width: 100%;
+  }
+}
+
+.detallePlato_card {
+  width: 100%;
+  margin: 1%;
+}
+
+.tituloYPagina {
+  flex-direction: row;
+  display: flex;
+}
+
+.pagination {
+  text-align: right;
+  width: 20%;
+
+  img{
+    width: 32px;
+    height: 32px;
+    margin: 0 10px 0 10px;
+    vertical-align: middle;
+  }
+}
+
+.paginationText {
+  margin: 0;
+  padding: 0;
+  margin-left: 25px;
+}
+
+hr {
+  border: 1 solid gray;
+  width: 98%;
+}
+
+.formDetallePlato {
+  width: 600px;
+  padding: 10px;
+
+  label {
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: left;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 320px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  input.inputNumber{
+    width: 160px;
+    margin-right: 160px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  select {
+    height: 35px;
+    width: 333px;
+  }
+
+}
+
+
+
+.isActive {
+  text-align: right;
+
+  & img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+//Punto de ruptura, A partir de este dato, deja de ser movil responsive.
+$breakpoint-alpha: 480px;
+@media (max-width: $breakpoint-alpha) {
+  .detallePlato {
+    flex-direction: column;
+    display: flex;
+    // align-content: center;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  .formDetallePlato {
+    width: 340px;
+    padding: 10px;
+  }
+
+  label {
+    width: 70px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 200px;
+    display: inline-block;
+  }
+}
+

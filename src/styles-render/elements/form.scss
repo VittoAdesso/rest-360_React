@@ -1,0 +1,52 @@
+
+.divForm{
+    // margin-top: 4rem;
+    // margin-bottom: 4rem;  
+    p{
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    .hora{
+        margin-top: 8px;
+        margin-bottom: 3px;
+    }
+    .div__datos{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.error{
+    color:red;
+    font-size: 11px;
+    font-weight: 800;
+
+}
+
+
+.confirmation{
+    
+    margin: 15%;
+    padding: 26px;
+    border-radius: 25px;
+    background-color: $highcolor;
+    color: $bgcolor;
+    font-size: 20px;
+
+}
+
+.confirmationLessMargin{
+    
+    margin: 4rem 3rem 2rem 3rem;
+    padding: 26px;
+    border-radius: 25px;
+    background-color: $highcolor;
+    color: $bgcolor;
+    font-size: 20px;
+
+}

@@ -1,0 +1,91 @@
+//Punto de ruptura, A partir de este dato, deja de ser movil responsive.
+$breakpoint-alpha: 480px; // adjust to your needs
+
+// MOVIL:
+// Ajuste de la tabla para formato movil:
+
+.rwd-table {
+  background-color: $bgcolor;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 0 0 1em 0;
+  caption-side: top;
+
+  th {
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    padding: 1em;
+    color: $highcolor; // color titulos
+    font-weight: bold;
+    display: none;
+    text-align: center;
+  }
+
+  td {
+    padding: 0.3em;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    display: block;
+
+    .spaceMovile {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    &:first-child {
+      padding-top: 0.2em;
+    }
+    &:last-child {
+      padding-bottom: 0.2em;
+    }
+
+    a {
+      color: $highcolor;
+    }
+    a:hover {
+      color: $navcolor;
+    }
+    // Textos de data-th para vista movil.
+    &:before {
+      content: attr(data-th) " ";
+      font-weight: bold;
+      color: $highcolor;
+
+      @media (min-width: $breakpoint-alpha) {
+        // Comtrola que no salga Befores a partir del punto de ruptura.
+        display: none;
+      }
+    }
+  }
+
+  // En movil todos los textos centrados.
+  .div__table__center,
+  .div__table__right,
+  .div__table__left {
+    text-align: center;
+  }
+
+  // Ajuste de la celdas para escritorio, solo valores que cambian:
+  @media (min-width: $breakpoint-alpha) {
+    th,
+    td {
+      // IMPORTANTE:
+      // Muestra tabla normal a partir del punto de ruptura.
+      display: table-cell;
+
+      .spaceMovile {
+        margin-bottom: 0px;
+      }
+    }
+
+    .div__table__center {
+      text-align: center;
+    }
+    .div__table__right {
+      text-align: right;
+    }
+    .div__table__left {
+      text-align: left;
+    }
+  }
+}

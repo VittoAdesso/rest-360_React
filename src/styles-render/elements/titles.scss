@@ -1,0 +1,23 @@
+.title{
+    font-family: $titleFont;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    
+}
+
+.subtitle{
+    font-family: $secondFont;
+    font-weight: 500;
+    margin-top: -3rem;
+}
+
+li{
+    font-weight: bolder;
+}
+
+.titleAdmin{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-top: -60px;
+}

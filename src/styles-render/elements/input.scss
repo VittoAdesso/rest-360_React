@@ -1,0 +1,76 @@
+// Estilos para todos los elementos inputs.
+
+input,
+textarea, 
+select {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 250px;
+  // max-width: 90%;
+  height: 30px;
+  padding-left: 10px;
+  margin: 5px;
+}
+
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+input[type="radio"] {
+  background: whitesmoke;
+  border-radius: 20px;
+  appearance: none !important;
+  outline: none;
+
+  height: 30px;
+  font-size: 20px;
+  font-weight: bolder;
+
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"]:before {
+  content: attr(label);
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-left: -5px;
+  margin-top: 3px;
+}
+
+input[type="radio"]:checked {
+  background: $highcolor;
+  color: $bgcolor;
+  border: 0;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+// cambio de tamaño para la seleccion de hora.
+input[name="hour"]{
+  width: 60px;
+  margin: 4px;
+  border-radius: 5px;
+}
+
+input[type="image"] {
+border:0;
+margin:0;
+padding: 0;
+}

@@ -1,0 +1,178 @@
+.menuItemDiv {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  height: 10rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+
+  justify-content: space-between;
+  &__card {
+    display: flex;
+    flex-direction: row;
+
+    &__image {
+      width: 33%;
+    }
+    &__titleandtime {
+      display: flex;
+      flex-direction: row;
+      width: 77%;
+      text-align: left;
+      align-self: flex-start;
+      align-items: center;
+      border-bottom: 1px solid black;
+      margin: 0 1rem;
+      &__divTitle {
+        width: 50%;
+        padding-right: 1rem;
+        &__title {
+          font-size: 0.75rem;
+        }
+      }
+      &__divPrice {
+        width: 30%;
+        padding-right: 0.5rem;
+        align-self: flex-start;
+        &__price {
+          // padding-top: 1rem;
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    &__alergenos {
+      display: flex;
+      flex-direction: row;
+      margin-top: -1rem;
+      justify-content: right;
+    }
+  }
+}
+
+.ItemDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.addItem {
+  cursor: pointer;
+}
+
+
+
+
+
+@media (min-width: 500px) and (max-width:750px) {
+    // para este pequeño margen de tamaño.
+    .menuItemDiv__card__titleandtime__divTitle {
+        width: 80%;
+        padding-right: 0.6rem;
+    }
+}
+
+//Punto de ruptura, 
+// A partir de este dato se hace adaptativo para movil y escritorio.
+
+
+@media (min-width: 389px) and (max-width: 410px) {
+    // para este pequeño margen de tamaño.
+    .menuItemDiv__card__titleandtime__divTitle {
+        width: 45%;
+        padding-right: 0.6rem;
+    }
+}
+
+@media (max-width: 389px) {
+  .roundDiv {
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 18px -2px #000000;
+    margin: 0.5rem;
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+
+  .menuItemDiv {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    height: 20rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    justify-content: space-between;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+
+      &__image {
+        margin-top: 10px;
+        width: auto;
+      }
+
+      &__titleandtime {
+        width: auto;
+        margin: 0 1rem;
+        align-self: auto;
+
+        &__divTitle {
+          width: 55%;
+          padding-right: 1rem;
+        }
+        &__divPrice__price {
+          padding-top: 0rem;
+          font-size: 1.6rem;
+          margin: 16px 0 16px 0;
+        }
+      }
+    }
+  }
+}
+
+.addItem {
+  cursor: pointer;
+}
+
+
+@media (min-width: 751px) and (max-width: 1149px) {
+    // para vista escritorio
+    .deployedDiv {
+        display: flex;
+        width: auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+    }
+    
+    .ItemDiv {
+        display: flex;
+        flex-direction: column;
+        width: 47%;
+        margin: 10px;
+    }
+}
+
+@media (min-width: 1150px) {
+    // para vista escritorio
+    .deployedDiv {
+        display: flex;
+        width: auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+    }
+    
+    .ItemDiv {
+        display: flex;
+        flex-direction: column;
+        width: 31%;
+        margin: 10px;
+    }
+}
+
