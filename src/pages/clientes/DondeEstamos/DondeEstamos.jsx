@@ -9,7 +9,7 @@ const DondeEstamos = () => {
   return (
     <div className="mainDiv">
       <StandardHeader bgImage={bgImage} />
-      <h1 className="title">Donde Estamos</h1>
+      <h1 className="title">Aquí estamos</h1>
       <div className="horarios">
       <h2>Rest360º</h2>
       <h3>Gran Vía, 36 / 28002 Madrid</h3>
