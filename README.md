@@ -5,10 +5,12 @@
 https://rest-360-react.vercel.app/
 
 ## Application preview
-
-<img src="./src/assets/FIRSTpage.png" with=100>
+<div align="center" >
+  <img src="./public/FIRSTpage.png" with=100>
+</div>
 
 --- 
+
 ## Available Scripts
 
 In the project directory, you can run:
